@@ -1,0 +1,32 @@
+{
+  "name": "lemme-take-a-selfie",
+  "version": "1.0.0",
+  "description": "Selfbot",
+  "main": "runBot.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCyberRonin/Lemme-take-a-selfie.git"
+  },
+  "keywords": [
+    "selfbot"
+  ],
+  "author": "CyberRonin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheCyberRonin/Lemme-take-a-selfie/issues"
+  },
+  "homepage": "https://github.com/TheCyberRonin/Lemme-take-a-selfie#readme",
+  "dependencies": {
+    "discord.io": "^2.5.2",
+    "neko.js": "^1.5.1",
+    "snekfetch": "^3.2.9",
+    "twitter": "^1.7.1",
+    "urlencode": "^1.1.0"
+  }
+}

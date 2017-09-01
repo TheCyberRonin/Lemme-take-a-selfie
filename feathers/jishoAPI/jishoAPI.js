@@ -51,11 +51,11 @@ module.exports = function feather(requires)
     for(let i = 0; i < arrLen; i ++)
     {
       let line = '';
-      if(japaneseArr[i].word == undefined)
+      if(japaneseArr[i].word === undefined)
       {
         line += ' (' + japaneseArr[i].reading + ')';
       }
-      else if(japaneseArr[i].reading == undefined)
+      else if(japaneseArr[i].reading === undefined)
       {
         line += ' ' + japaneseArr[i].word;
       }
@@ -63,7 +63,7 @@ module.exports = function feather(requires)
       {
         line += ' ' + japaneseArr[i].word + ' (' + japaneseArr[i].reading + ')';
       }
-      if(i != arrLen - 1)
+      if(i !== arrLen - 1)
       {
         line += ',';
       }
@@ -83,9 +83,9 @@ module.exports = function feather(requires)
       {
         definitions += (numDefs+1) + '. ';
         numDefs ++;
-        if(concatArr(sensesArr[i].parts_of_speech) == '')
+        if(concatArr(sensesArr[i].parts_of_speech) === '')
         {
-          if(concatArr(sensesArr[i].tags) == '')
+          if(concatArr(sensesArr[i].tags) === '')
           {
             definitions += concatArr(sensesArr[i].english_definitions) +'\n';
           }

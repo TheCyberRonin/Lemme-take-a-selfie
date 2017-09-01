@@ -23,7 +23,7 @@ module.exports = function feather(requires)
           if(response.status === 200)
           {
             let animeResponse = JSON.parse(response.text);
-            if(animeResponse.data.length != 0)
+            if(animeResponse.data.length !== 0)
             {
               resolve(animeResponse.data);
             }
@@ -83,7 +83,7 @@ module.exports = function feather(requires)
     for(let i = 0; i < arr.length; i ++)
     {
       str += `${i+1}. ${arr[i].attributes.titles.en_jp}`;
-      if(arr[i].attributes.titles.ja_jp != null && arr[i].attributes.titles.ja_jp != '')
+      if(arr[i].attributes.titles.ja_jp !== null && arr[i].attributes.titles.ja_jp !== '')
       {
         str += ` (${arr[i].attributes.titles.ja_jp})\n`;
       }
@@ -101,11 +101,11 @@ module.exports = function feather(requires)
     let emb = {};
     let maxLength = 1014;
     let tv = true;
-    if(body[n].attributes.showType == 'Movie')
+    if(body[n].attributes.showType === 'Movie')
     {
       tv = false;
     }
-    if(body[n].attributes.titles.en != null && body[n].attributes.titles.en != '')
+    if(body[n].attributes.titles.en !== null && body[n].attributes.titles.en !== '')
     {
       emb.title = body[n].attributes.titles.en;
       emb.description = body[n].attributes.titles.en_jp;
@@ -132,72 +132,9 @@ module.exports = function feather(requires)
     thumb.url = body[n].attributes.posterImage.medium;
     //fields embeds
     let fields = [];
-    /*
-    //Air Dates
-    let airDates = {name: 'Air Date(s):', inline: true};
-    if(body[n].attributes.startDate != null)
-    {
-      if(!tv)
-      {
-        airDates.value = `Aired: ${body[n].attributes.startDate}`;
-      }
-      else
-      {
-        airDates.value = `Start: ${body[n].attributes.startDate}`;
-      }
-      
-    }
-    if(body[n].attributes.endDate != null)
-    {
-      if(tv)
-      {
-        airDates.value += `\nFinish: ${body[n].attributes.endDate}`;
-      }      
-    }
-    if(body[n].attributes.endDate != null || body[n].attributes.startDate != null)
-    {
-      fields.push(airDates);
-    }
-    //Episodes
-    let eps = {name: 'Episodes:', inline:true};
-    if(body[n].attributes.episodeCount == null)
-    {
-      eps.value = 'Unknown.';
-    }
-    else
-    {
-      eps.value = body[n].attributes.episodeCount;
-    }
-    if(tv)
-    {
-      fields.push(eps);
-    }        
-    //ep runtime
-    let epRun = {name: 'Episode Runtime:', inline: true};
-    if(!tv)
-    {
-      epRun.name = 'Movie Runtime:';
-    }
-    if(body[n].attributes.episodeLength!= null)
-    {
-      epRun.value = `${body[n].attributes.episodeLength}m`;
-      fields.push(epRun);
-    }
-    //age Rating
-    if(body[n].attributes.ageRating != null)
-    {
-      let age = {name: 'Age Rating', value: body[n].attributes.ageRating, inline: true};
-      fields.push(age);
-    }
-    if(body[n].attributes.youtubeVideoId != '' && body[n].attributes.youtubeVideoId != null)
-    {
-      let youtube = {name: 'Trailer Link', value: `https://www.youtube.com/watch?v=${body[n].attributes.youtubeVideoId}`, inline: true};
-      fields.push(youtube);
-    }
-    */
     //synopsis
     let synopsis = {name: 'Synopsis:', inline: false};
-    if(body[n].attributes.synopsis == '')
+    if(body[n].attributes.synopsis === '')
     {
       synopsis.value = 'No synopsis yet 😭';
     }

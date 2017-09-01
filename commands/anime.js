@@ -63,12 +63,12 @@ module.exports = function command(requires)
       };
       try{
         if(details.input === '') {return;}
-        else if(details.input.search(/.+\s(--list)/g) != -1)
+        else if(details.input.search(/.+\s(--list)/g) !== -1)
         {
           listAnime(details.input.replace(' --list', ''));
           return;
         }
-        else if(details.input.search(/^.+\s--[1-9][0-9]*$/g) != -1)
+        else if(details.input.search(/^.+\s--[1-9][0-9]*$/g) !== -1)
         {
           let patt = /[1-9][0-9]*$/g;
           let num = parseInt(patt.exec(details.input),10);

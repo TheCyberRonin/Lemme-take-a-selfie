@@ -37,7 +37,7 @@ module.exports = function command(requires)
       };
       //handles command input
       if(details.input === '') {return;}
-      if(details.input.search(/^.+\s[1-9][0-9]*$/g) != -1)
+      if(details.input.search(/^.+\s[1-9][0-9]*$/g) !== -1)
       {
         let patt = /[1-9][0-9]*$/g;
         let num = parseInt(patt.exec(details.input),10);

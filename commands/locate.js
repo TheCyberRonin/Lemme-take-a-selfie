@@ -31,7 +31,7 @@ module.exports = function command(requires)
         let emoteReg = /<:.+:\d{18}>/g;
         let emoteIDReg = /\d{18}/g;
         let emoteNameReg = /:.+:/g;
-        if(string.search(emoteReg)!= -1)
+        if(string.search(emoteReg) !== -1)
         {
           let emoteStr = emoteReg.exec(string);
           let emoteID = emoteIDReg.exec(emoteStr);
@@ -46,7 +46,7 @@ module.exports = function command(requires)
           });
         }
       }
-      if(details.args.length == 2)
+      if(details.args.length === 2)
       {
         processEmote(details.args[1]);
       }

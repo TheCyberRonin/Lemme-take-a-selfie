@@ -9,7 +9,6 @@ const discord = require('discord.io');
 const Loader = require('./Loader');
 const CommandLoader = require('./CommandLoader');
 const FeatherLoader = require('./FeatherLoader');
-const fork = require('child_process').fork;
 
 /**
  * @class

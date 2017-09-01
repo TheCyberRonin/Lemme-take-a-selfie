@@ -1,6 +1,6 @@
 Lemme take a selfie. Self Bot.
 
-Things you'll need to install the bot.
+Things you'll need for the bot.
 * NodeJS
 * Your user token
 
@@ -12,7 +12,7 @@ To install NodeJS:
 Once that is installed, you'll have to run a command in the `jiko` folder:  
 `npm install`  
 If you want it to run 24/7 (which is okay to do), you'll have 2 extra steps.  
- 1. `npm install --gloal pm2`
+ 1. `npm i -g pm2`
  2. `pm2 start runBot.js --name="self"`
  
 If you want to manually run it, instead of 24/7, just run `node runBot.js` in the `root` repo folder. Doing it that way will only have it run when

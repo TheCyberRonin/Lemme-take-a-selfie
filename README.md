@@ -1,3 +1,4 @@
+### Selfbots are banne now, please don't use them. :sob: I will leave the repo up for archiving purposes.
 Lemme take a selfie. Self Bot.
 
 Things you'll need for the bot.
